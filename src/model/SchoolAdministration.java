@@ -12,28 +12,31 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class SchoolAdministration {
+    private final ArrayList<Teacher> teachers = new ArrayList<>();
     private final ArrayList<Student> students = studentCSVReader();
     private final ArrayList<Person> persons = createListOfAllPersons(students);
-    private static final ArrayList<Teacher> teachers = new ArrayList<>();
 
     public SchoolAdministration() {
-        // Because teachers are regular employees they will remain unlike students
-        teachers.add(new Teacher("Jackson", "Dannielle", generateRandomNumber(1950, 1990)));
-        teachers.add(new Teacher("Mcdaniel", "Donald", generateRandomNumber(1950, 1990)));
-        teachers.add(new Teacher("Perez", "Jad", generateRandomNumber(1950, 1990)));
-        teachers.add(new Teacher("Ford", "Ada", generateRandomNumber(1950, 1990)));
-        teachers.add(new Teacher("Hoover", "Nile", generateRandomNumber(1950, 1990)));
     }
 
     // Getters
+    public ArrayList<Teacher> getTeachers() {
+        return teachers;
+    }
     public ArrayList<Student> getStudents() {
         return students;
     }
     public ArrayList<Person> getPersons() {
         return persons;
     }
-    public ArrayList<Teacher> getTeachers() {
-        return teachers;
+
+    /**
+     * Add teacher to list
+     * @param lastName last name of the teacher
+     * @param firstName first name of the teacher
+     */
+    public void addTeacher(String lastName, String firstName) {
+        teachers.add(new Teacher(lastName, firstName, generateRandomNumber(1950, 1990)));
     }
 
     /**
@@ -41,7 +44,7 @@ public class SchoolAdministration {
      * @param students list of students to add
      * @return list of all persons
      */
-    public static ArrayList<Person> createListOfAllPersons(ArrayList<Student> students) {
+    public ArrayList<Person> createListOfAllPersons(ArrayList<Student> students) {
         ArrayList<Person> result = new ArrayList<>();
 
         result.addAll(students);

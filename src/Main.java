@@ -12,6 +12,13 @@ public class Main {
         SchoolAdministration administration = new SchoolAdministration();
         String input;
 
+        // Add teachers
+        administration.addTeacher("Jackson", "Dannielle");
+        administration.addTeacher("Mcdaniel", "Donald");
+        administration.addTeacher("Perez", "Jad");
+        administration.addTeacher("Ford", "Ada");
+        administration.addTeacher("Hoover", "Nile");
+
         // Sort teachers by last name and randomize all students
         Collections.sort(administration.getTeachers());
         Collections.shuffle(administration.getStudents());
