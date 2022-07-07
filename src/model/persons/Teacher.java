@@ -15,7 +15,7 @@ public class Teacher extends Person {
 
     /**
      * Get teacher initials.
-     * @return The initials of the teacher
+     * @return the initials of the teacher
      */
     public String getInitials() {
         return initials;
@@ -23,7 +23,7 @@ public class Teacher extends Person {
 
     /**
      * Get the number of students assigned to this teacher/mentor.
-     * @return The number of students
+     * @return the number of students
      */
     public int getNrOfMentorStudents() {
         return mentorStudents.size();
@@ -31,7 +31,7 @@ public class Teacher extends Person {
 
     /**
      * Add the given student to this teacher.
-     * @param student The student to add
+     * @param student the student to add
      */
     public void addMentorStudent(Student student) throws AdministrationException {
         if (mentorStudents.contains(student)) {

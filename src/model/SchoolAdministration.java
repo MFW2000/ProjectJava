@@ -13,10 +13,12 @@ import java.util.Scanner;
 
 public class SchoolAdministration {
     private final ArrayList<Teacher> teachers = new ArrayList<>();
-    private final ArrayList<Student> students = studentCSVReader();
-    private final ArrayList<Person> persons = createListOfAllPersons(students);
+    private final ArrayList<Student> students;
+    private final ArrayList<Person> persons;
 
     public SchoolAdministration() {
+        students = studentCSVReader();
+        persons = createListOfAllPersons(students);
     }
 
     // Getters
@@ -36,6 +38,7 @@ public class SchoolAdministration {
      * @param firstName first name of the teacher
      */
     public void addTeacher(String lastName, String firstName) {
+        // Teacher age is not important so it is generated
         teachers.add(new Teacher(lastName, firstName, generateRandomNumber(1950, 1990)));
     }
 
@@ -62,6 +65,7 @@ public class SchoolAdministration {
         int dividedStudents = students.size() / teachers.size();
 
         try {
+            // Assign all eually assignable students
             for (Teacher teacher : teachers) {
                 for (int i = 0; i < dividedStudents; i++) {
                     teacher.addMentorStudent(students.get(0));
@@ -69,6 +73,7 @@ public class SchoolAdministration {
                 }
             }
 
+            // Assign leftover students one by one to one teacher until none are left
             for (Teacher teacher : teachers) {
                 if (students.size() != 0) {
                     teacher.addMentorStudent(students.get(0));
@@ -100,6 +105,7 @@ public class SchoolAdministration {
                 String lastName = splits[0];
                 String firstName = splits[1];
 
+                // Student age is not important so it is generated
                 Student student = new Student(lastName, firstName, generateRandomNumber(1990, 2005));
                 students.add(student);
             }
