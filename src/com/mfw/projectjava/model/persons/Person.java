@@ -1,4 +1,4 @@
-package model.persons;
+package com.mfw.projectjava.model.persons;
 
 import java.time.Year;
 import java.util.regex.Matcher;

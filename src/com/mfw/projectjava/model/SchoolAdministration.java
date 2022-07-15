@@ -1,9 +1,9 @@
-package model;
+package com.mfw.projectjava.model;
 
-import model.exception.AdministrationException;
-import model.persons.Person;
-import model.persons.Student;
-import model.persons.Teacher;
+import com.mfw.projectjava.model.exception.AdministrationException;
+import com.mfw.projectjava.model.persons.Person;
+import com.mfw.projectjava.model.persons.Student;
+import com.mfw.projectjava.model.persons.Teacher;
 
 import java.io.File;
 import java.io.FileNotFoundException;

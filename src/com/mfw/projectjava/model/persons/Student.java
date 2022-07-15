@@ -1,4 +1,4 @@
-package model.persons;
+package com.mfw.projectjava.model.persons;
 
 public class Student extends Person {
     private static int NEXT_ID = 100000;

@@ -1,6 +1,6 @@
-package model.persons;
+package com.mfw.projectjava.model.persons;
 
-import model.exception.AdministrationException;
+import com.mfw.projectjava.model.exception.AdministrationException;
 
 import java.util.ArrayList;
 

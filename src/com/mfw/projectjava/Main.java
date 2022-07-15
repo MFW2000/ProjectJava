@@ -1,8 +1,10 @@
-import model.SchoolAdministration;
-import model.exception.AdministrationException;
-import model.persons.Person;
-import model.persons.Student;
-import model.persons.Teacher;
+package com.mfw.projectjava;
+
+import com.mfw.projectjava.model.SchoolAdministration;
+import com.mfw.projectjava.model.exception.AdministrationException;
+import com.mfw.projectjava.model.persons.Person;
+import com.mfw.projectjava.model.persons.Student;
+import com.mfw.projectjava.model.persons.Teacher;
 
 import java.util.Collections;
 import java.util.Scanner;
